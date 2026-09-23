@@ -32,4 +32,4 @@ pnpm build      # production build
 
 ## Contributing
 
-`main` is protected — all changes go through a pull request. See the PR template for requirements.
+`main` is protected — all changes go through a pull request. (A PR template is planned; until then, describe what changed, tests run, and any security/privacy impact in the PR body.)
