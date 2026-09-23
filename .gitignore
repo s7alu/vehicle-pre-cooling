@@ -1,0 +1,70 @@
+# =============================================================================
+# Local-only governance & planning docs — NEVER commit these.
+# The repo (this folder, once `git init` runs) is PUBLIC. These files contain
+# business strategy, gate criteria, economics, and legal risk notes that stay
+# local only. See 01_HANDOFF.md §9 / decision on public repo, 2026-09-23.
+# =============================================================================
+/01_HANDOFF.md
+/02_SECURITY_HANDOFF.md
+/03_COMPLIANCE_CHECKLIST.md
+/04_AGENT_RULEBOOK.md
+/UAE_Remote_PreCooling_BRD.md
+/UAE_Remote_PreCooling_PRD.md
+/docs/BRD.md
+/docs/PRD.md
+
+# Any other local notes/scratch docs that shouldn't ship publicly.
+/docs/private/
+*.local.md
+NOTES.md
+TODO.md
+
+# =============================================================================
+# Secrets — never commit these, ever, in any environment.
+# =============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cert
+id_rsa*
+id_ed25519*
+*.keystore
+credentials.json
+secrets.json
+secrets.yml
+secrets.yaml
+*.secrets
+.npmrc
+.netrc
+*.tfstate
+*.tfstate.backup
+
+# =============================================================================
+# Standard OS / editor noise
+# =============================================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =============================================================================
+# Node / Next.js (ready for P0.5 scaffold — harmless if unused until then)
+# =============================================================================
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.turbo/
+.vercel/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
