@@ -53,7 +53,7 @@ Thumbs.db
 .idea/
 
 # =============================================================================
-# Node / Next.js (ready for P0.5 scaffold — harmless if unused until then)
+# Node / Next.js
 # =============================================================================
 node_modules/
 .next/
@@ -64,7 +64,17 @@ coverage/
 *.tsbuildinfo
 .turbo/
 .vercel/
+next-env.d.ts
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnp
+.pnp.*
+.pnpm-debug.log*
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/blob-report/
