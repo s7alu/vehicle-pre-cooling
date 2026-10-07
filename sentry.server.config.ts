@@ -1,7 +1,4 @@
 import * as Sentry from "@sentry/nextjs";
+import { sentryOptions } from "./sentry.options";
 
-Sentry.init({
-  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  environment: process.env.VERCEL_ENV ?? "development",
-  tracesSampleRate: 1,
-});
+Sentry.init(sentryOptions);
