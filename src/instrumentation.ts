@@ -8,4 +8,11 @@ export async function register() {
   }
 }
 
-export const onRequestError = Sentry.captureRequestError;
+// Next.js awaits onRequestError before considering the request finished, so awaiting the
+// flush here (rather than relying on Sentry's fire-and-forget internal waitUntil, which only
+// registers with Vercel's keep-alive context under the Edge runtime, not Node.js) is what
+// actually gets the event delivered before a Node.js serverless function freezes.
+export const onRequestError = async (...args: Parameters<typeof Sentry.captureRequestError>) => {
+  Sentry.captureRequestError(...args);
+  await Sentry.flush(2000);
+};
