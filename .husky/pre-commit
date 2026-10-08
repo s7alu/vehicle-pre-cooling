@@ -1,0 +1,7 @@
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "gitleaks not found — install it with 'brew install gitleaks' before committing." >&2
+  exit 1
+fi
+
+gitleaks protect --staged -v
+pnpm lint-staged

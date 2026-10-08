@@ -1,0 +1,9 @@
+title = "gitleaks config — vehicle-pre-cooling"
+
+[extend]
+# Start from gitleaks' default, well-maintained rule set (AWS keys, private keys, generic
+# high-entropy secrets, provider-specific tokens, etc.) rather than hand-rolling our own.
+useDefault = true
+
+# No allowlist entries yet. Add one here (with a comment explaining why) only for a confirmed
+# false positive — never to silence a real finding.
