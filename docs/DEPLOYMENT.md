@@ -25,8 +25,9 @@ step yet).
 
 ## Migrations
 
-No database exists yet (P0). Once one is introduced (P2+), migrations will go through Prisma only,
-using expand → migrate → contract, run as part of the deploy process — never a hand-edited table.
+No database exists yet (P0). Once one is introduced (P2+), migrations will go through an ORM only
+(Prisma is the proposed default, not yet ratified by an ADR — see `docs/adr/0001-stack.md`), using
+expand → migrate → contract, run as part of the deploy process — never a hand-edited table.
 
 ## Feature flags
 

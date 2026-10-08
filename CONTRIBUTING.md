@@ -33,7 +33,9 @@ pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm build && p
 
 A pre-commit hook (gitleaks + lint-staged) runs automatically on `git commit` once you've run
 `pnpm install` — it blocks commits containing secret-shaped values and auto-fixes lint/format
-issues on staged files.
+issues on staged files. Requires `gitleaks` installed locally (`brew install gitleaks`). If your
+checkout doesn't yet have `.husky/pre-commit`, that work hasn't merged to your base branch yet —
+GitHub's server-side secret scanning + push protection still apply regardless.
 
 ## What never goes in
 

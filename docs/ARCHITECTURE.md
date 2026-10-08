@@ -35,9 +35,12 @@ Next.js app (App Router, Node.js runtime)
 
 ## Not yet built (planned, by phase)
 
-- **Database** (P2+): planned as managed PostgreSQL via Prisma. See `docs/DATA_MODEL.md`.
-- **Authentication / admin roles** (P3): managed auth provider, MFA for admin accounts.
-- **Payments** (P4): hosted checkout (Stripe), test-mode only until the legal gate passes.
+- **Database** (P2+): managed PostgreSQL via Prisma is the proposed default, not yet ratified by
+  an ADR (see `docs/adr/0001-stack.md`). See `docs/DATA_MODEL.md`.
+- **Authentication / admin roles** (P3): managed auth provider, MFA for admin accounts — provider
+  not yet chosen.
+- **Payments** (P4): hosted checkout, test-mode only until the legal gate passes — provider not
+  yet chosen.
 - **Analytics** (P1): privacy-conscious, no PII. See `docs/ANALYTICS.md`.
 
 This section will be replaced with real component/data-flow diagrams as each piece is built —

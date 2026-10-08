@@ -20,7 +20,7 @@ Requires Node.js LTS and pnpm (see `package.json` → `packageManager`). The Nod
 in `.nvmrc`.
 
 ```bash
-pnpm install   # also installs the local pre-commit hook (gitleaks + lint-staged)
+pnpm install
 pnpm dev
 ```
 
@@ -46,6 +46,7 @@ pnpm build         # production build
 | `docs/SECURITY.md`     | Security posture, scanning, secrets handling                            |
 | `docs/TESTING.md`      | Test commands, E2E matrix, staging smoke process                        |
 | `docs/DEPLOYMENT.md`   | Environments, CI/CD, releases, rollback                                 |
+| `docs/LOGGING.md`      | Logging/error-reporting convention — when to use Sentry vs. `console.*` |
 | `docs/DATA_MODEL.md`   | Schema, PII classification _(planned — no database yet)_                |
 | `docs/ANALYTICS.md`    | Event dictionary _(planned — no analytics yet)_                         |
 | `docs/RUNBOOKS/`       | Operational failure procedures                                          |

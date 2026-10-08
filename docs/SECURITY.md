@@ -36,7 +36,9 @@ not gaps in P0, they're future work:
 - All secrets live in Vercel's environment variable store, scoped per environment, and are pulled
   locally only via `vercel env pull` — never typed into chat or committed.
 - A local pre-commit hook (gitleaks) scans staged changes for secret-shaped values before GitHub's
-  server-side push protection ever sees them. See `CONTRIBUTING.md`.
+  server-side push protection ever sees them — see `CONTRIBUTING.md`. GitHub's secret
+  scanning + push protection (listed above) apply regardless of whether the local hook is present
+  on a given checkout.
 
 ## Reporting a vulnerability
 
