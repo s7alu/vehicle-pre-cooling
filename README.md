@@ -18,8 +18,12 @@ Full rationale will be documented in an Architecture Decision Record.
 
 Requires Node.js LTS and pnpm (see `package.json` → `packageManager`).
 
+Also requires [gitleaks](https://github.com/gitleaks/gitleaks) (`brew install gitleaks`) — a
+local pre-commit hook uses it to block commits containing secret-shaped values, before they ever
+reach GitHub.
+
 ```bash
-pnpm install
+pnpm install   # also sets up the pre-commit hook (gitleaks + lint-staged) via husky
 pnpm dev
 ```
 
