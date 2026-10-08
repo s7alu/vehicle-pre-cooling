@@ -37,8 +37,13 @@ process-only, not GitHub-enforced — the independent-review step is what actual
 - This is a **compensating control**, not equivalent to a second human's judgment. Revisit this
   ADR when a second person joins the project (switch to one human approval + `CODEOWNERS` on
   sensitive paths, per `02_SECURITY_HANDOFF.md` SEC-012).
-- Every PR in this project so far has gone through this flow (see PR history); it has caught real
-  bugs before merge, not just style nits (see PR #1, #5, #6 review write-ups).
+- This full flow is applied to PRs with real implementation content — it has caught real bugs
+  before merge, not just style nits (see PR #1, #5, #6 review write-ups). It is **not** applied
+  uniformly: routine Dependabot version bumps and a few early PRs merged on CI-green alone, with
+  no independent-review pass or recorded founder approval comment (e.g. PR #2, #3). That's a real
+  gap against this ADR's own stated model, not a hypothetical one — worth closing by applying the
+  same bar consistently, even to "small" PRs, since P0.9's own review found real bugs in docs that
+  looked equally low-risk.
 
 ## Alternatives considered
 
