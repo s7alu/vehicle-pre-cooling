@@ -16,7 +16,8 @@ Full rationale will be documented in an Architecture Decision Record.
 
 ## Development
 
-Requires Node.js LTS and pnpm (see `package.json` → `packageManager`).
+Requires Node.js LTS and pnpm (see `package.json` → `packageManager`). The Node version is pinned
+in `.nvmrc`.
 
 ```bash
 pnpm install
@@ -26,10 +27,33 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) to view it.
 
 ```bash
-pnpm lint       # ESLint
-pnpm build      # production build
+pnpm lint          # ESLint
+pnpm format        # Prettier — write
+pnpm format:check  # Prettier — check only
+pnpm typecheck     # next typegen + tsc --noEmit
+pnpm test          # Vitest unit tests
+pnpm test:coverage # Vitest with coverage
+pnpm test:e2e      # Playwright end-to-end + accessibility (desktop + mobile)
+pnpm build         # production build
 ```
+
+## Documentation
+
+| Doc                    | Purpose                                                                 |
+| ---------------------- | ----------------------------------------------------------------------- |
+| `docs/PRODUCT.md`      | Scope, phases, exclusions, current business-gate status                 |
+| `docs/ARCHITECTURE.md` | Components, data flow, trust boundaries                                 |
+| `docs/SECURITY.md`     | Security posture, scanning, secrets handling                            |
+| `docs/TESTING.md`      | Test commands, E2E matrix, staging smoke process                        |
+| `docs/DEPLOYMENT.md`   | Environments, CI/CD, releases, rollback                                 |
+| `docs/LOGGING.md`      | Logging/error-reporting convention — when to use Sentry vs. `console.*` |
+| `docs/DATA_MODEL.md`   | Schema, PII classification _(planned — no database yet)_                |
+| `docs/ANALYTICS.md`    | Event dictionary _(planned — no analytics yet)_                         |
+| `docs/RUNBOOKS/`       | Operational failure procedures                                          |
+| `docs/adr/`            | Architectural decision records                                          |
+| `CHANGELOG.md`         | Notable changes, [Keep a Changelog](https://keepachangelog.com/) format |
 
 ## Contributing
 
-`main` is protected — all changes go through a pull request. (A PR template is planned; until then, describe what changed, tests run, and any security/privacy impact in the PR body.)
+See `CONTRIBUTING.md`. `main` is protected — all changes go through a pull request using
+`.github/pull_request_template.md`.
