@@ -24,6 +24,9 @@ grouped under **Unreleased** until the first versioned release.
 - P0 exit-review docs: `docs/DEFINITION_OF_DONE.md`, `docs/VENDORS.md`,
   `docs/adr/0002-solo-review-model.md`, root `SECURITY.md` pointer, weekly `.github/dependabot.yml`
   version-update schedule, Mermaid diagram in `docs/ARCHITECTURE.md`.
+- P1.1: real public landing page content (hero proposition, how-it-works, vehicle compatibility
+  policy, legal/safety disclosure, FAQ), replacing the P0 holding page. CTA is present but
+  disabled pending the email-capture ticket (P1.2). Added `/privacy` and `/terms` stub pages.
 
 ### Security
 
