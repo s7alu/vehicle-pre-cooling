@@ -19,3 +19,13 @@ grouped under **Unreleased** until the first versioned release.
   `docs/TESTING.md`, `docs/DEPLOYMENT.md`, `docs/DATA_MODEL.md` and `docs/ANALYTICS.md` (stubs),
   `docs/RUNBOOKS/`, `docs/adr/0001-stack.md`, PR/issue templates, `CODEOWNERS`,
   `CONTRIBUTING.md`.
+- Local pre-commit hook (gitleaks + lint-staged via Husky) — blocks secret-shaped commits before
+  they reach GitHub.
+- P0 exit-review docs: `docs/DEFINITION_OF_DONE.md`, `docs/VENDORS.md`,
+  `docs/adr/0002-solo-review-model.md`, root `SECURITY.md` pointer, weekly `.github/dependabot.yml`
+  version-update schedule, Mermaid diagram in `docs/ARCHITECTURE.md`.
+
+### Security
+
+- Bumped Next.js 16.3.6 → 16.3.8, fixing 6 Dependabot advisories (1 high — SSRF in Image
+  Optimization — plus 4 moderate/1 low cache-poisoning and information-disclosure issues).

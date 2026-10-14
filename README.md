@@ -12,7 +12,7 @@ Early foundation stage (P0). Application skeleton exists; no business features y
 - Tailwind CSS
 - pnpm as package manager
 
-Full rationale will be documented in an Architecture Decision Record.
+Full rationale in `docs/adr/0001-stack.md`.
 
 ## Development
 
@@ -43,19 +43,21 @@ pnpm build         # production build
 
 ## Documentation
 
-| Doc                    | Purpose                                                                 |
-| ---------------------- | ----------------------------------------------------------------------- |
-| `docs/PRODUCT.md`      | Scope, phases, exclusions, current business-gate status                 |
-| `docs/ARCHITECTURE.md` | Components, data flow, trust boundaries                                 |
-| `docs/SECURITY.md`     | Security posture, scanning, secrets handling                            |
-| `docs/TESTING.md`      | Test commands, E2E matrix, staging smoke process                        |
-| `docs/DEPLOYMENT.md`   | Environments, CI/CD, releases, rollback                                 |
-| `docs/LOGGING.md`      | Logging/error-reporting convention — when to use Sentry vs. `console.*` |
-| `docs/DATA_MODEL.md`   | Schema, PII classification _(planned — no database yet)_                |
-| `docs/ANALYTICS.md`    | Event dictionary _(planned — no analytics yet)_                         |
-| `docs/RUNBOOKS/`       | Operational failure procedures                                          |
-| `docs/adr/`            | Architectural decision records                                          |
-| `CHANGELOG.md`         | Notable changes, [Keep a Changelog](https://keepachangelog.com/) format |
+| Doc                          | Purpose                                                                 |
+| ---------------------------- | ----------------------------------------------------------------------- |
+| `docs/PRODUCT.md`            | Scope, phases, exclusions, current business-gate status                 |
+| `docs/ARCHITECTURE.md`       | Components, data flow, trust boundaries                                 |
+| `docs/SECURITY.md`           | Security posture, scanning, secrets handling                            |
+| `docs/TESTING.md`            | Test commands, E2E matrix, staging smoke process                        |
+| `docs/DEPLOYMENT.md`         | Environments, CI/CD, releases, rollback                                 |
+| `docs/LOGGING.md`            | Logging/error-reporting convention — when to use Sentry vs. `console.*` |
+| `docs/DATA_MODEL.md`         | Schema, PII classification _(planned — no database yet)_                |
+| `docs/ANALYTICS.md`          | Event dictionary _(planned — no analytics yet)_                         |
+| `docs/RUNBOOKS/`             | Operational failure procedures                                          |
+| `docs/adr/`                  | Architectural decision records                                          |
+| `docs/VENDORS.md`            | Every third-party service: purpose, data shared, region, owner, DPA     |
+| `docs/DEFINITION_OF_DONE.md` | What "done" means for any feature                                       |
+| `CHANGELOG.md`               | Notable changes, [Keep a Changelog](https://keepachangelog.com/) format |
 
 ## Contributing
 

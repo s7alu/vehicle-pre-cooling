@@ -5,17 +5,18 @@
 A single Next.js application, no database, no auth, no payments yet. This is intentional — P0 is
 the foundation phase and ships no business logic (see `docs/PRODUCT.md`).
 
-```
-Browser
-  │
-  ▼
-Vercel Edge Network
-  │
-  ▼
-Next.js app (App Router, Node.js runtime)
-  │
-  ├──> Sentry (errors, traces, logs — see docs/SECURITY.md)
-  └──> Vercel Function logs
+```mermaid
+flowchart TD
+    Browser["Browser"]
+    Edge["Vercel Edge Network<br/>(TLS terminated here)"]
+    App["Next.js app<br/>(App Router, Node.js runtime)"]
+    Sentry["Sentry<br/>(errors, traces, logs)"]
+    Logs["Vercel Function logs"]
+
+    Browser -->|HTTPS| Edge
+    Edge --> App
+    App -->|error/trace/log data only,<br/>no PII or secrets| Sentry
+    App --> Logs
 ```
 
 | Component        | What it is                               | Notes                                                                           |
