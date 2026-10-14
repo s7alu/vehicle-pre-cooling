@@ -1,9 +1,38 @@
 import Link from "next/link";
 
+const faqs = [
+  {
+    question: "Does this start my car remotely?",
+    answer:
+      "The pre-cooling runs through a licensed installer's professionally fitted remote-start hardware — this website never accesses or controls your vehicle.",
+  },
+  {
+    question: "Is this legal in the UAE?",
+    answer:
+      "We're seeking formal legal clarification before offering any installation or service. Nothing will be installed until that's resolved.",
+  },
+  {
+    question: "Which cars are supported?",
+    answer:
+      "None yet — we're validating compatibility case by case. Register interest and we'll follow up as checks open.",
+  },
+  {
+    question: "Does it cost anything right now?",
+    answer: "No. Pricing isn't set, and no payment is being collected at this stage.",
+  },
+  {
+    question: "What happens after I register?",
+    answer: "We'll email you when compatibility checks open for your vehicle. No obligation.",
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col bg-zinc-50 font-sans dark:bg-black">
-      <header className="border-b border-zinc-200 px-6 py-4 dark:border-zinc-800">
+      <header
+        aria-label="Vehicle Pre-Cooling"
+        className="border-b border-zinc-200 px-6 py-4 dark:border-zinc-800"
+      >
         <p className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
           Vehicle Pre-Cooling
         </p>
@@ -78,50 +107,12 @@ export default function Home() {
         <section className="mx-auto max-w-2xl px-6 py-12">
           <h2 className="text-xl font-semibold text-black dark:text-zinc-50">FAQ</h2>
           <dl className="mt-4 space-y-6">
-            <div>
-              <dt className="font-medium text-zinc-900 dark:text-zinc-100">
-                Does this start my car remotely?
-              </dt>
-              <dd className="mt-1 text-zinc-700 dark:text-zinc-300">
-                The pre-cooling runs through a licensed installer&rsquo;s professionally fitted
-                remote-start hardware — this website never accesses or controls your vehicle.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-medium text-zinc-900 dark:text-zinc-100">
-                Is this legal in the UAE?
-              </dt>
-              <dd className="mt-1 text-zinc-700 dark:text-zinc-300">
-                We&rsquo;re seeking formal legal clarification before offering any installation or
-                service. Nothing will be installed until that&rsquo;s resolved.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-medium text-zinc-900 dark:text-zinc-100">
-                Which cars are supported?
-              </dt>
-              <dd className="mt-1 text-zinc-700 dark:text-zinc-300">
-                None yet — we&rsquo;re validating compatibility case by case. Register interest and
-                we&rsquo;ll follow up as checks open.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-medium text-zinc-900 dark:text-zinc-100">
-                Does it cost anything right now?
-              </dt>
-              <dd className="mt-1 text-zinc-700 dark:text-zinc-300">
-                No. Pricing isn&rsquo;t set, and no payment is being collected at this stage.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-medium text-zinc-900 dark:text-zinc-100">
-                What happens after I register?
-              </dt>
-              <dd className="mt-1 text-zinc-700 dark:text-zinc-300">
-                We&rsquo;ll email you when compatibility checks open for your vehicle. No
-                obligation.
-              </dd>
-            </div>
+            {faqs.map((faq) => (
+              <div key={faq.question}>
+                <dt className="font-medium text-zinc-900 dark:text-zinc-100">{faq.question}</dt>
+                <dd className="mt-1 text-zinc-700 dark:text-zinc-300">{faq.answer}</dd>
+              </div>
+            ))}
           </dl>
         </section>
       </main>
