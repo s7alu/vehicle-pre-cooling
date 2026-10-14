@@ -31,8 +31,10 @@ business gate (below) has passed.
 
 ## Current status
 
-**Phase: P0 — Foundation.** No public business logic is live yet; the deployed site is a holding
-page. See the repository's commit/PR history for exactly what has shipped.
+**Phase: P1 — Public validation landing page (in progress).** P0 is complete. The deployed site
+now has real public content (proposition, how-it-works, vehicle compatibility policy, legal
+disclosure, FAQ) — the interest-registration CTA is visible but not yet wired (that's the next P1
+ticket). See the repository's commit/PR history for exactly what has shipped.
 
 ## Business validation gates
 
